@@ -9,6 +9,7 @@ COPY telnet_client.sh /telnet_client.sh
 RUN chmod +x /telnet_client.sh
 
 LABEL \
+      type="host" \
       actions.bot_telnet_client.command="/telnet_client.sh" \ 
       actions.bot_telnet_client.description="A telnet client, repeats a telnet request " \ 
       actions.bot_telnet_client.args.ip_telnet_server.val="" \ 

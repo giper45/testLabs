@@ -7,6 +7,7 @@ COPY addctf.sh /addctf.sh
 CMD /bin/sh
 
 LABEL \
+	type="host" \
 	actions.adduser.command="/adduser.sh" \ 
       actions.adduser.description="Add a new username : <name> <password> " \ 
       actions.adduser.args.name.val="user" \
@@ -25,3 +26,4 @@ LABEL \
       actions.setgw.description="Set default gateway  <name container gateway> " \ 
       actions.setgw.args.gateway.val="" \
       actions.setgw.args.gateway.type="text" \
+

@@ -20,3 +20,5 @@ RUN echo ' service ftp \n\
 }\n' \
   >> /etc/xinetd.conf
 CMD service xinetd start && bash
+
+LABEL type="server"

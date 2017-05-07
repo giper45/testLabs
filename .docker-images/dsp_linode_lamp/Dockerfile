@@ -10,6 +10,7 @@ RUN chmod +x /apache_start.sh ;
 RUN chmod +x /create_db.sh ;
 RUN chmod +x /sql_to_db.sh ;
 LABEL ports="80" \
+      type="server" \
       actions.start_apache.command="/apache_start.sh" \ 
       actions.start_apache.description="Start web server" \ 
       actions.start_mysql.command="/mysql_start.sh" \ 

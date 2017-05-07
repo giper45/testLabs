@@ -13,6 +13,7 @@ ENV SIAB_SSL=false
 
 
 LABEL ports="4200" \
+      type="entry_point" \
 	actions.addroute.command="/addroute.sh" \ 
       actions.addroute.description="Add a new route for the subnet : set router ip and subnet " \ 
       actions.addroute.args.subnet.val="192.168.1.2/24" \

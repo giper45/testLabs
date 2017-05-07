@@ -15,3 +15,5 @@ RUN echo ' service telnet \n\
 # Add User to find
 # Start Telnet Server
 CMD service xinetd start && bash
+
+LABEL type="server"
