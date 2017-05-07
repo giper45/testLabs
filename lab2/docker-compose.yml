@@ -1,7 +1,0 @@
-version: '2'
-services:
-  LabTest:
-    image: 'dsp/debian_bot:latest'
-    stdin_open: true
-    tty: true
-networks: {}
