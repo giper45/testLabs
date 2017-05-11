@@ -4,10 +4,16 @@ RUN apt-get update && apt-get install -y net-tools vim nano
 COPY adduser.sh /adduser.sh
 COPY setgw.sh /setgw.sh
 COPY addctf.sh /addctf.sh
+COPY exec.sh /exec.sh
 CMD /bin/sh
 
 LABEL \
 	type="host" \
+	actions.exec.command="/exec.sh " \ 
+      actions.exec.description="Execute a command in the container" \ 
+      actions.exec.args.command.val="mkdir hello" \
+      actions.exec.args.command.type="text" \
+
 	actions.adduser.command="/adduser.sh" \ 
       actions.adduser.description="Add a new username : <name> <password> " \ 
       actions.adduser.args.name.val="user" \
