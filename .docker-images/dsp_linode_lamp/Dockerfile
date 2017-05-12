@@ -1,6 +1,6 @@
 FROM linode/lamp
 
-RUN apt-get update && apt-get install -y php5-mysql vim gcc make
+RUN apt-get update && apt-get install -y php5-mysql 
 COPY mysql_start.sh /mysql_start.sh
 COPY apache_start.sh /apache_start.sh
 COPY create_db.sh /create_db.sh
@@ -18,6 +18,7 @@ LABEL ports="80" \
 
       actions.create_db.command="/create_db.sh" \ 
       actions.create_db.description="Create a new db, insert a name for new db" \ 
+      actions.create_db.args.db_name.rule.name="alphaNumeric" \ 
       actions.create_db.args.db_name.val="" \ 
       actions.create_db.args.db_name.type="text" \ 
 

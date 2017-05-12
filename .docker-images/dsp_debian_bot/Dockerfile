@@ -1,6 +1,6 @@
 FROM dsp/debian_base:latest
 
-RUN apt-get install -y telnet
+RUN apt-get update && apt-get install -y telnet
 
 
 
